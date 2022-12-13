@@ -9,13 +9,28 @@
 
 // calculateVolumeAndArea(5)  => 'Объем куба: 125, площадь всей поверхности: 150'
 
+
+
+//Вариант 1(не рабоатет)
 function calculateVolumeAndArea(a) {
-if (typeof(a)==="number" && Number.isInteger(a) === "true" && a > 0){
+if (typeof(a) ==="number" && Number.isInteger(a) === "true" && a > 0){
     const volume = Math.pow(a, 3);
     const length = 6 * Math.pow(a, 2);
-    let result = "Объем куба: `${volume}`, площадь всей поверхности: `${length }`";
+    let result = `Объем куба: ${volume}, площадь всей поверхности: ${length }`;
     console.log(result);
 } else {console.log("При вычислении произошла ошибка");}
 }
 
+calculateVolumeAndArea(2);
+
+//Вариант 1(рабоатет)
+function calculateVolumeAndArea(a) {
+    if (typeof(a)!=="number" || a < 0 || Number.isInteger(a) === "false"){
+        console.log("При вычислении произошла ошибка");
+    }
+    const volume = Math.pow(a, 3);
+    const length =  6 * Math.pow(a, 2);
+    let result = `Объем куба: ${ volume }, площадь всей поверхности: ${length }`;
+    console.log(result);
+}
 calculateVolumeAndArea(2);
